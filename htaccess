@@ -1,0 +1,58 @@
+ErrorDocument 403 /404.html
+ErrorDocument 404 /404.html
+
+DirectoryIndex page14368583.html
+
+RewriteEngine On
+
+RewriteCond %{HTTP:X-Forwarded-Proto} =http
+RewriteRule ^(.*)$ https://smurphy\.net/$1 [R=301,L]
+
+RewriteCond %{HTTP:X-Forwarded-Proto} =https
+RewriteCond %{HTTP_HOST} ^www\.smurphy.net [NC]
+RewriteRule ^(.*)$ https://smurphy\.net/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} /robots.txt
+RewriteCond "%{DOCUMENT_ROOT}/robots_%{HTTP_HOST}.txt" -f
+RewriteRule ^(.*)$ robots_%{HTTP_HOST}.txt [NC,L]
+RewriteRule ^shop$ page14369343.html [NC]
+RewriteRule ^shop/$ page14369343.html [NC]
+
+RewriteRule ^contactsmurphy$ page14366370.html [NC]
+RewriteRule ^contactsmurphy/$ page14366370.html [NC]
+
+RewriteRule ^epk$ page14367063.html [NC]
+RewriteRule ^epk/$ page14367063.html [NC]
+
+RewriteRule ^header$ page12156747.html [NC]
+RewriteRule ^header/$ page12156747.html [NC]
+
+RewriteRule ^r-chv$ page12130951.html [NC]
+RewriteRule ^r-chv/$ page12130951.html [NC]
+
+RewriteRule ^smurphy$ page12132421.html [NC]
+RewriteRule ^smurphy/$ page12132421.html [NC]
+
+RewriteRule ^footer$ page12156754.html [NC]
+RewriteRule ^footer/$ page12156754.html [NC]
+
+RewriteRule ^contact$ page12198592.html [NC]
+RewriteRule ^contact/$ page12198592.html [NC]
+
+RewriteRule ^dpi$ page12176596.html [NC]
+RewriteRule ^dpi/$ page12176596.html [NC]
+
+RewriteRule ^spheres$ page14220093.html [NC]
+RewriteRule ^spheres/$ page14220093.html [NC]
+
+RewriteRule ^peninsula$ page14317396.html [NC]
+RewriteRule ^peninsula/$ page14317396.html [NC]
+
+RewriteRule ^sorry$ page14317444.html [NC]
+RewriteRule ^sorry/$ page14317444.html [NC]
+
+RewriteRule ^discos$ page14343675.html [NC]
+RewriteRule ^discos/$ page14343675.html [NC]
+
+RewriteRule ^favicon.ico$ https://static.tildacdn.com/tild3065-3535-4566-a633-323736366535/favicon.ico [R=302,L]
+
